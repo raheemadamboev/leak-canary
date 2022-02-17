@@ -12,5 +12,8 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // intentional memory leak
+        MainActivity.context = this
     }
 }
